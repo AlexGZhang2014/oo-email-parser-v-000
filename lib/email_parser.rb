@@ -10,7 +10,7 @@ class EmailParser
   attr_accessor :emails
   
   def parse
-    parsed_emails = @emails.split(/,\s/).join(/\s/).split(/\s/)
+    parsed_emails = @emails.split(/,\s/).join(' ').split(' ')
     final_emails = parsed_emails.uniq
   end
   
